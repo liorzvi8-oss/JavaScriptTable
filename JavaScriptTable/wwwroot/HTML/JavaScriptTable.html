@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript Table</title>
+    <script type="text/javascript">
+        function createTable(fName, lName, age, address) {
+            document.write(`
+                <table cellpadding="15" border-collapse: collapse; border="1"; align="center" dir="rtl">
+                    <tr>
+                        <td style="font: 16px Arial">שם פרטי</td>
+                        <td style="font: 16px Arial">שם משפחה</td>
+                        <td style="font: 16px Arial">גיל</td>
+                        <td style="font: 16px Arial">כתובת</td>
+                    </tr>
+                    <tr>
+                        <td style="font: 16px Arial; background-color: lightskyblue">${fName}</td>
+                        <td style="font: 16px Arial; background-color: gold">${lName}</td>
+                        <td style="font: 16px Arial; background-color: lightgreen">${age}</td>
+                        <td style="font: 16px Arial; background-color: red">${address}</td>
+                    </tr>
+                </table>
+            `);
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var firstName = prompt("Enter your first name: ");
+        var lastName = prompt("Enter your last name: ");
+        var age = prompt("Enter your age: ");
+        var address = prompt("Enter your address: ");
+        createTable(firstName, lastName, age, address);
+    </script>
+</body>
+</html>
